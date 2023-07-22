@@ -22,12 +22,27 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 #SECRET_KEY = 'django-insecure-axt%#z!%x0w86#w=%wi%h_k&si=#5o^ne6-ujf#1@7$7514tv4'
-SECRET_KEY = os.environ.get("SECRET_KEY")
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG","False").lower()=="true"
+if "SECRET_KEY" in os.environ:
+    SECRET_KEY = os.environ["SECRET_KEY"]
+    DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
+    ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(" ")
 
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
+    database_url = os.environ.get("DATABASE_URL")
+    DATABASES = {
+        'default': dj_database_url.parse(database_url)
+    }
+else:
+    # Development settings
+    SECRET_KEY = 'django-insecure-axt%#z!%x0w86#w=%wi%h_k&si=#5o^ne6-ujf#1@7$7514tv4'
+    DEBUG = True
+    ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 # Application definition
 
@@ -71,17 +86,8 @@ TEMPLATES = [
 WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-database_url = os.environ.get("DATABASE_URL")
-DATABASES["default"]=dj_database_url.parse(database_url)
+
 
 
 # Password validation
