@@ -1,13 +1,83 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Blog</title>
+  <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 </head>
 <body>
-    <h1>This is the basic website for django application</h1>
-    <a href="https://www.youtube.com/" >CLICK</a>
-    <img src="https://images.unsplash.com/photo-1689613188635-e363f305a2ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" >
+  <header>
+    <div class="container">
+      <h1>My Personal Blog</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <main>
+      <section class="content">
+        <article>
+          <h2>Blog Post Title 1</h2>
+          <p class="meta">Published on July 23, 2023 by John Doe</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel consectetur mi, et volutpat nunc. Nulla facilisi. Proin a erat nec nibh vestibulum gravida. Mauris ac augue non erat ultrices efficitur. In ac consequat libero.</p>
+        </article>
+
+        <article>
+          <h2>Blog Post Title 2</h2>
+          <p class="meta">Published on July 24, 2023 by Jane Smith</p>
+          <p>Quisque laoreet nisl tellus, vel auctor mauris euismod at. Suspendisse potenti. Maecenas venenatis arcu at sem consequat, eu laoreet eros semper.</p>
+        </article>
+
+        <!-- Add more articles as needed -->
+      </section>
+
+      <aside class="sidebar">
+        <div class="about-me">
+          <h3>About Me</h3>
+          <img src="{% static 'img/profile_picture.jpg' %}" alt="Profile Picture">
+          <p>Hello, I'm John Doe, a passionate blogger. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <!-- Add more sidebar content as needed -->
+
+        <div class="newsletter">
+          <h3>Subscribe to Newsletter</h3>
+          <form>
+            <input type="email" placeholder="Your Email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </aside>
+    </main>
+
+    <section class="contact">
+      <h2>Contact Me</h2>
+      <form>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <section class="comments">
+      <h2>Comments</h2>
+      <!-- Add a comment section here -->
+    </section>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 My Personal Blog. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
