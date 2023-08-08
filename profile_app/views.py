@@ -4,8 +4,5 @@ from django.http import HttpResponse
 def Home(request):
     return render(request,"home.html")
     
-def About(request):
-    return render(request,"about.html")
-
-def Contact(request):
-    return render(request,"contact.html")
+def Blog(request):
+    return render(request,"blog.html")
