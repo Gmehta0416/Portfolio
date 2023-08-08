@@ -1,87 +1,347 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Personal Blog</title>
-  <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-</head>
-<body>
-  <header>
-    <div class="container">
-      <h1>My Personal Blog</h1>
-      <nav>
-        <ul>
-          <li><a href="{% url 'home' %}">Home</a></li>
-          <li><a href="{% url 'about' %}">About</a></li>
-          <li><a href="{% url 'contact' %}">Contact</a></li>
-        </ul>
-      </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>goinri</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Lexend:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="blog.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- start of section-1 -->
+    <section class="header-section">
+      <div class="navbar-container">
+        <div class="nav-section1">
+          <a href="#" class="nav-logo"
+            ><i class="bx bxs-pyramid color-logo"></i>Inri</a
+          >
+          <ul class="nav-list">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#Blog">Blog</a></li>
+          </ul>
+        </div>
+        <div class="nav-section2">
+                <button class="nav-button">
+                  <i class="bx bx-search"></i>
+                  <span>Invest in India, NRI taxation, ...</span>
+                </button>
+                <a href="#" class="nav-sign-in"><span>Sign in</span></a>
+        </div>
+      </div>
     </div>
-  </header>
+  </section>
+    <!-- end of section-1 -->
 
-  <div class="container">
-    <main>
-      <section class="content">
-        <article>
-          <h2>Blog Post Title 1</h2>
-          <p class="meta">Published on July 23, 2023 by John Doe</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel consectetur mi, et volutpat nunc. Nulla facilisi. Proin a erat nec nibh vestibulum gravida. Mauris ac augue non erat ultrices efficitur. In ac consequat libero.</p>
-        </article>
-        <article>
-          <h2>Blog Post Title 2</h2>
-          <p class="meta">Published on July 23, 2023 by John Doe</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel consectetur mi, et volutpat nunc. Nulla facilisi. Proin a erat nec nibh vestibulum gravida. Mauris ac augue non erat ultrices efficitur. In ac consequat libero.</p>
-        </article>
-        <article>
-          <h2>Blog Post Title 3</h2>
-          <p class="meta">Published on July 24, 2023 by Jane Smith</p>
-          <p>Quisque laoreet nisl tellus, vel auctor mauris euismod at. Suspendisse potenti. Maecenas venenatis arcu at sem consequat, eu laoreet eros semper.</p>
-        </article>
-
-        <!-- Add more articles as needed -->
-      </section>
-
-      <aside class="sidebar">
-        <div class="about-me">
-          <h3>About Me</h3>
-          <img src="{% static 'img/profile_picture.jpg' %}" alt="Profile Picture">
-          <p>Hello, I'm John Doe, a passionate blogger. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<!-- start of section 2 -->
+<div class="section-2">
+  <div class="intro-container">
+    <div class="intro-grid">    
+      <div class="intro-content">
+        <h4>India Calling:
+          <span class="heading-span">Invest from Abroad</span>
+        </h4>
+        <p>Diversify your wealth to Indian stock markets</p>
+        <p>with easy repatriation and tax compliance</p>
+        <div class="intro-nav">
+          <a href="" class="btn first"><span>Get Started for FREE</span></a>
+          <a href="" class="btn second"><span>Talk to our expert</span></a>
         </div>
-
-        <!-- Add more sidebar content as needed -->
-
-        <div class="newsletter">
-          <h3>Subscribe to Newsletter</h3>
-          <form>
-            <input type="email" placeholder="Your Email" required>
-            <button type="submit">Subscribe</button>
-          </form>
+        <div class="intro-logo">
+          <img src="https://www.goinri.com/_next/static/media/amfi-logo.bc5806cc.jpeg" height="50" width="50" alt="">
+          <span>A certified Mutual Fund distributor registered with Association of Mutual Funds in India (AMFI) with Reg. No. 264519</span>
         </div>
-      </aside>
-    </main>
+      </div>
+       <div class="intro-gif">
+        <img src="https://www.goinri.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fteaser.2a9d7330.gif&w=828&q=75" alt="" class="gif">
+       </div>
+    </div>
 
-    <section class="contact">
-      <h2>Contact Me</h2>
-      <form>
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-
-    <section class="comments">
-      <h2>Comments</h2>
-      <!-- Add a comment section here -->
-    </section>
+    <div class="intro-sponser">
+      <p class="Lexend">Backed by</p>
+      <div class="intro-links">
+        <div class="intro-links-img">
+          <img src="https://www.goinri.com/_next/static/media/yc.2188fd43.svg" width="160" height="50" alt="">
+        </div>
+        <div class="intro-sponser-link">
+          <a href="https://www.ycombinator.com/launches/IC8-inri-wealthfront-for-indian-expats">
+            <img src="https://www.ycombinator.com/launches/IC8-inri-wealthfront-for-indian-expats/upvote_embed.svg" alt="" width="200" height="50">
+          </a>
+          <a href="https://www.producthunt.com/products/inri?utm_source=badge-top-post-topic-badge&utm_medium=badge#inri">
+            <img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-topic-badge.svg?post_id=385507&theme=light&period=weekly&topic_id=94" alt="" width="210" height="50">
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
+<!-- end of section 2 -->
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2023 My Personal Blog. All rights reserved.</p>
+
+
+    <!-- start of section3 -->
+    <section id="features">
+      <div class="feature-container">
+        <div class="feature-heading">
+          <p id="info-head">A one-stop platform for Indian Expacts</p>
+          <p id="info-lower">Your trusted gateway to invest in india</p>
+        </div>
+        <div class="feature-info">
+          <dl class="grid">
+            <div class="feature-card ">
+              <dt class="feature-card-heading">
+                <div class="feature-card-logo"><i class='bx bx-cube-alt'></i></div>
+                Invest reliably with index funds
+              </dt>
+              <dd class="feature-card-para">
+                Build wealth over time by subscribing to our  curated portfolio of
+                    equity & debt instruments. Relax and focus on other important
+                    things in life
+              </dd>
+            </div>
+            <div class="feature-card ">
+              <dt class="feature-card-heading">
+                <div class="feature-card-logo"><i class='bx bx-cube-alt'></i></div>
+                Earn high returns with India’s growth
+              </dt>
+              <dd class="feature-card-para">
+                With its young talent and growing urban class, India is poised to
+                    be one of the fastest growing economies in the next decade. We
+                    offer a seamless way for this growth to reflect in your asset
+                    portfolio.
+              </dd>
+            </div>
+            <div class="feature-card ">
+              <dt class="feature-card-heading">
+                <div class="feature-card-logo"><i class='bx bx-cube-alt'></i></div>
+                Faster account opening processes with trusted banks
+              </dt>
+              <dd class="feature-card-para">
+                Invest with us and open a NRE/NRO bank account with top banks like
+                    ICICI, Axis, Yes in few days. No more waiting for weeks just to
+                    get started.
+              </dd>
+            </div>
+            <div class="feature-card ">
+              <dt class="feature-card-heading">
+                <div class="feature-card-logo"><i class='bx bx-diamond'></i></div>
+                Complimentary tax guidance
+              </dt>
+              <dd class="feature-card-para">
+                Investing in a foreign market can be complicated, especially when
+                    it comes to taxation. Use our simple and tax-compliant platform to
+                    invest with confidence.
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- end of section 3 -->
+    <!-- start of section 4 -->
+    <section id="testimonials">
+      <div class="testi-container">
+        <div class="testi-text">
+          <h2>Loved by our customers.</h2>
+          <p>Our intuitive platform is committed to solve the unique needs of Indian expats around the world.</p>
+        </div>
+        <ul class="testi-list">
+          <li class="testi-cards">
+            <div class="testi-grid">
+              <div class="testi-para">
+                <p>Inri’s seamless platform has reinvented investing in India. I could invest in index mutual funds within 3 days compared to weeks earlier.</p>
+              </div>
+              <div class="testi-info">
+                <div class="testi-user-info">
+                  <div class="testi-name">Abhiroop CVK</div>
+                  <div class="testi-loc">Brooklyn, NY</div>
+                </div>
+                <div class="testi-user-image">
+                  <img src="https://www.goinri.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fabhiroop.0f573265.jpg&w=64&q=75" alt="">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="testi-cards">
+            <div class="testi-grid">
+              <div class="testi-para">
+                <p>Inri offers a self-serve product with a 100% digital experience. Kudos to the team for making investing in India simpler.</p>
+              </div>
+              <div class="testi-info">
+                <div class="testi-user-info">
+                  <div class="testi-name">Akash Agarwal</div>
+                  <div class="testi-loc">Sunnyvale, CA</div>
+                </div>
+                <div class="testi-user-image">
+                  <img src="https://www.goinri.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fakash.bbfbc292.jpg&w=64&q=75" alt="">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="testi-cards">
+            <div class="testi-grid">
+              <div class="testi-para">
+                <p>Managing my Indian portfolio has never been easier. I can see my investments, no need to call my India broker and converse back & forth.</p>
+              </div>
+              <div class="testi-info">
+                <div class="testi-user-info">
+                  <div class="testi-name">Tanvi T</div>
+                  <div class="testi-loc">Seattle, WA</div>
+                </div>
+                <div class="testi-user-image">
+                  <img src="https://www.goinri.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftanvi.4eabc29d.jpg&w=64&q=75" alt="">
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- end of section 4 -->
+
+
+    <!-- start of section 5 -->
+    <section id="team">
+      <div class="team-container">
+        <div class="team-info-container">
+          <div class="team-details">
+            <h2>Our Team</h2>
+            <p>A decade of experience from top tier institutions</p>
+            <div class="company-logos">
+              <img src="https://www.goinri.com/_next/static/media/iitb.450b5016.svg" alt="" class="company-images">
+              <img src="https://www.goinri.com/_next/static/media/iima.49d3ba6a.svg" alt="" class="company-images">
+              <img src="https://www.goinri.com/_next/static/media/bcg.e0546188.svg" alt="" class="company-images">
+              <img src="https://www.goinri.com/_next/static/media/hsbc.638df386.svg" alt="" class="company-images">
+              <img src="https://www.goinri.com/_next/static/media/mck1.be7e3cb6.svg" alt="" class="company-images">
+              <img src="https://www.goinri.com/_next/static/media/meta.5c16dbfd.svg" alt="" class="company-images">
+              <img src="https://www.goinri.com/_next/static/media/walmart.6edd5d3f.svg" alt="" class="company-images">
+            </div>
+          </div>
+          <div class="team-profile">
+            <div class="profile-card">
+              <img src="https://www.goinri.com//_next/static/media/hemant.16e97063.jpeg" class="founder-image" height="200" width="200" alt="">
+              <div class="team-info">
+                <h3>Hemant Gangolia</h3>
+                <p>CEO</p>
+              </div>
+              <div class="linkedin-profile-logo">
+                <i class='bx bxl-linkedin-square'></i>
+              </div>
+            </div>
+            <div class="profile-card">
+              <div class="profile-card">
+                <img src="https://www.goinri.com//_next/static/media/nishad.0bb1835b.jpg" class="founder-image" width="200" height="200" alt="">
+                <div class="team-info">
+                  <h3>Nishad Shah</h3>
+                  <p>President</p>
+                </div>
+                <div class="linkedin-profile-logo">
+                  <i class='bx bxl-linkedin-square'></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of section 5 -->
+
+    <!-- start of section 6 -->
+    <section id="faq">
+      <div class="faq-container">
+        <h2>Frequently asked questions</h2>
+        <ul class="faq-list">
+          <li class="faq-card">
+            <h3>Why invest in India?</h3>
+            <p>India is set to be the world’s fastest growing major economy of this decade. Index funds in India have grown 73% vs 42% growth of US Index in the last 5 years. With the Fed increasing interest rates, US equities have taken a hit but Indian markets are still strong. With India’s young talent and strong capital inflows, India is on the path towards becoming a global superpower.</p>
+          </li>
+          <li class="faq-card"><h3>Why invest with Inri?</h3>
+            <p>NRI investing in India is cumbersome, difficult to start with and needs local insights for making investment choices. We simplify the operational challenges and provide deep market understanding to guide you at each step. Inri is your personal wealth advisor and offer a one-stop platform to invest in India.</p></li>
+          <li class="faq-card"><h3>How will taxation work?</h3>
+            <p>One has to pay taxes in India for the income and capital gains accrued in India. You may have to declare it in your foreign country to avoid double taxation. We streamline the entire process and take care of your tax fillings so that you don’t get mired in tax hassles.</p></li>
+          <li class="faq-card"><h3>I don’t know where to invest in India. Where do I start?</h3>
+            <p>Absolutely, our team has put in the research so you don’t have to. We offer a curated basket of instruments, based on your financial goals and risk appetite.</p></li>
+          <li class="faq-card"><h3>Is my money safe?</h3>
+            <p>Your money always stays with you. The funds directly flow from your bank account to the the financial instruments (e.g. mutual fund, ETFs, etc.). We are your personal advisor and help guide your investment choices best aligned to your financial goals.</p></li>
+          <li class="faq-card"><h3>How does currency exchange work here?</h3>
+            <p>Your money gets converted into INR when it’s deposited in the Indian bank account. All your investments are in INR and are redeemed in INR back to your Indian bank account. You can easily repatriate it back through an NRE account (no limits) and NRO account (upto $1M annually).</p></li>
+          <li class="faq-card"><h3>Which accounts are required?</h3>
+            <p>One just needs a NRE/NRO bank account to start investing in Mutual Funds.</p></li>
+          <li class="faq-card"><h3>Do you help open bank accounts as well?</h3>
+            <p>Yes, we’ve partnered with Indian major banks and help provide support in opening all required accounts faster at no extra fees.</p></li>
+          
+            
+        </ul>
+      </div>
+    </section>
+    <!-- end of section 6 -->
+    
+    <!-- start of section 7 -->
+    <div class="get-in-touch">
+      <div class="git-container">
+        <div class="git-content">
+          <div class="git-text">
+            <h2>Get in touch</h2>
+            <p>We’re here to help if you have any questions. Schedule a call with us, message us, or send an email.</p>
+          </div>
+        </div>
+        <div class="git-contact">
+          <div class="git-contact-card">
+            <div class="git-card">
+              <div class="git-card-logo"><i class='bx bx-time'></i></div>
+              <a href="">Book a call</a>
+            </div>
+            <div class="git-card">
+              <div class="git-card-logo"><i class='bx bx-message-rounded-dots'></i></div>
+              <a href="">WhatsApp us</a>
+            </div>
+            <div class="git-card">
+              <div class="git-card-logo"><i class='bx bxs-inbox' ></i></div>
+              <a href="">contact@goinri.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </footer>
-</body>
+    <!-- end of section 7 -->
+    <!-- start of footer -->
+    <footer id="footer-section">
+      <div class="footer-main">
+        <a href="#" class="nav-logo"
+            ><i class="bx bxs-pyramid color-logo"></i>Inri</a
+          >
+          <ul class="nav-list nav-footer-list">
+            <li><a href="#Features">Features</a></li>
+            <li><a href="#Team">Team</a></li>
+            <li><a href="#Blog">Blog</a></li>
+          </ul>
+          <ul class="nav-list nav-terms">
+            <li><a href="#Terms">Terms</a></li>
+            <li><a href="#Privacy">Privacy</a></li>
+          </ul>
+      </div>
+      <div class="footer-link">
+        <div class="footer-description">
+          <p>Copyright © 2023 Inri. All rights reserved.</p>
+        </div>
+        <div class="social-handle">
+            <a href="" class="social-account"><i class='bx bxl-linkedin'></i></a>
+            <a href="" class="social-account"><i class='bx bxl-twitter' ></i></a>
+            <a href="" class="social-account"><i class='bx bxl-facebook-circle' ></i></a>
+        </div>
+      </div>
+    </footer>
+    <!-- end of footer -->
+  </body>
 </html>
